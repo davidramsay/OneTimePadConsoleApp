@@ -15,27 +15,27 @@ For more information on one time pads, and an explanation on what makes them unb
 
 ** HOW OTP works **
 ---
-Imagine Alice wants to send a private message to Bob. Alice writes down "HELLO" and creates a unique key, "QWERT" and shares that with Bob "out of band", via dead drop for example.
+Imagine Alice wants to send a private message to Bob. Alice writes down "HELLO" and creates a unique key, "QWERT" and shares that with Bob "out of band", via dead drop or encrypted messenger like Meshtastic for example.
 - To keep the message secret, Alice adds the numerical value of each letter of "HELLO" with the corresponding numerical value of each letter in "QWERT". For example, the plaintext letter is H with a numerical value of 7, and the corresponding key letter is Q with a value of 16. 7 + 16 = 23. The letter in the 23rd place of the alphabet (using an index of 0 where A=0) is X.
 
-Plain - H
-Key - Q
+Plain - H /
+Key - Q /
 Cipher - X
 
-Plain - E
-Key - W
+Plain - E /
+Key - W /
 Cipher - A
 
-Plain - L
-Key - E
+Plain - L /
+Key - E /
 Cipher - P
 
-Plain - L
-Key - R
+Plain - L /
+Key - R /
 Cipher - C
 
-Plain - O
-Key - T
+Plain - O /
+Key - T /
 Cipher - H
 
 - If we follow this logic, Alice's encrypted message becomes "XAPCH"
